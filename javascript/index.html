@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>belajar javascript</title>
+</head>
+<body>
+    <div>
+        <!-- waktu -->
+        <h1 id="waktu">Waktu</h1>
+        <button onclick="waktu()">waktu</button>
+
+        <!-- zodiak -->
+        <h1 id="zodiak">zodiak</h1>
+        <input type="number" id="tanggal" placeholder="tanggal">
+        <input type="number" id="bulan" placeholder="bulan">
+        <button onclick="zodiak()">zodiak</button>
+
+        <!-- kali,kurang,jumlah -->
+        <h1 id="hasil">Hasil</h1>
+        <input type="number" id="bil1" placeholder="bilangan 1">
+        <input type="number" id="bil2" placeholder="bilangan 2">
+        <button onclick="kali()">kali</button>
+        <button onclick="kurang()">kurang</button>
+        <button onclick="tambah()">tambah</button>
+
+        <!-- ganti javascript -->
+        <h1 id="ganti">belajar javascript</h1>
+        <button onclick="hello()">javascript</button>
+
+        <!-- ganti nama -->
+        <h1 id="ganti2">Nama</h1>
+        <button onclick="nama()">Nama</button>
+
+        <!-- nama saya -->
+        <h1 id="saya">Nama Saya</h1>
+        <input type="text" id="nama" placeholder="Nama Saya">
+        <button onclick="namasaya()">Nama Saya</button>
+
+    </div>
+    <script>
+        // waktu
+        function waktu(){
+            document.getElementById('waktu').innerHTML=Date();
+        }
+
+        // zodiak
+        function zodiak(){
+            let tanggal=document.getElementById('tanggal').value;
+            let bulan=document.getElementById('bulan').value;
+            let zodiak="invalid";
+
+        if(bulan==1){
+        if(tanggal>0 && tanggal<20){
+            zodiak="H";
+        }
+        if(tanggal>19 && tanggal<32){
+            zodiak="G";
+        }
+        }
+
+        if(bulan==2){
+            if(tanggal>0 && tanggal<20){
+                zodiak="F";
+            }
+            if(tanggal>19 && tanggal<31){
+                zodiak="E";
+            }
+        }
+        if(bulan==3){
+            if(tanggal>0 && tanggal<20){
+                zodiak="da";
+            }
+            if(tanggal>19 && tanggal<31){
+                zodiak="ca";
+            }
+        }
+        if(bulan==4){
+            if(tanggal>0 && tanggal<20){
+                zodiak="ba";
+            }
+            if(tanggal>19 && tanggal<31){
+                zodiak="ab";
+            }
+        }
+        if(bulan==5){
+            if(tanggal>0 && tanggal<20){
+                zodiak="D";
+            }
+            if(tanggal>19 && tanggal<31){
+                zodiak="C";
+            }
+        }
+        if(bulan==6){
+            if(tanggal>0 && tanggal<20){
+                zodiak="B";
+            }
+            if(tanggal>19 && tanggal<31){
+                zodiak="A";
+            }
+        }
+        document.getElementById('zodiak').innerHTML=zodiak;
+        }
+
+        // kali,penjumlahan,pengurangan
+        function kali(){
+
+            let a=document.getElementById('bil1').value;
+            let b=document.getElementById('bil2').value;
+            let hasil=a*b;
+
+            document.getElementById('hasil').innerHTML=hasil;
+        }
+        function kurang(){
+
+            let a=document.getElementById('bil1').value;
+            let b=document.getElementById('bil2').value;
+            let hasil=a-b;
+
+            document.getElementById('hasil').innerHTML=hasil;
+        }
+        function tambah(){
+
+            let a=document.getElementById('bil1').value;
+            let b=document.getElementById('bil2').value;
+            let hasil=parseInt(a)+parseInt(b);
+
+            document.getElementById('hasil').innerHTML=hasil;
+        }
+
+        // js
+        function hello(){
+            document.getElementById('ganti').innerHTML="Hallo JavaScript";
+        }
+
+        // nama
+        function nama(){
+            document.getElementById('ganti2').innerHTML="Galanggg";
+        }
+
+        // namasaya
+        function namasaya(){
+            document.getElementById('saya').innerHTML= document.getElementById('nama').value;
+        }
+
+    </script>
+</body>
+</html>
